@@ -13,9 +13,16 @@ pipeline {
 	  }
     stage("Integration Test"){
       steps{
-      
         echo "Integration test "
       }
+    }
+  } 
+  post {
+    always {
+      echo "I am great, Menco"
+    }
+    success {
+      echo "Success!"
     }
   }
 }
