@@ -1,9 +1,5 @@
 pipeline {
-  agent any 
-    tools {
-        maven "myMaven"
-    }
-  
+  agent { docker { image 'node:13.8'}}
   stages{
   	stage('Build') {
       steps{
