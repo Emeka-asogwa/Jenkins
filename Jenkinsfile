@@ -1,6 +1,8 @@
 pipeline {
   agent any 
-    // { image 'maven:3.2'}
+    tools {
+        maven "maven3"
+    }
   
   stages{
   	stage('Build') {
